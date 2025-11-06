@@ -1,0 +1,72 @@
+/* Ferrari Sans Light (300) */
+@font-face {
+    font-family: 'FerrariSans';
+    font-weight: 300;
+    font-style: normal;
+    src: url('../font/Ferrari-SansLight.woff') format('woff');
+}
+
+/* Ferrari Sans Regular (400) */
+@font-face {
+    font-family: 'FerrariSans';
+    font-weight: 400;
+    font-style: normal;
+    src: url('../font/Ferrari-SansRegular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'FerrariSans';
+    font-weight: 400;
+    font-style: italic;
+    src: url('../font/Ferrari-SansRegularItalic.woff') format('woff');
+}
+
+/* Ferrari Sans Medium (500) */
+@font-face {
+    font-family: 'FerrariSans';
+    font-weight: 500;
+    font-style: normal;
+    src: url('../font/Ferrari-SansMedium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'FerrariSans';
+    font-weight: 500;
+    font-style: italic;
+    src: url('../font/Ferrari-SansMediumItalic.woff') format('woff');
+}
+
+/* Ferrari Sans Bold (700) */
+@font-face {
+    font-family: 'FerrariSans';
+    font-weight: 700;
+    font-style: normal;
+    src: url('../font/Ferrari-SansBold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'FerrariSans';
+    font-weight: 700;
+    font-style: italic;
+    src: url('../font/Ferrari-SansBoldItalic.woff') format('woff');
+}
+
+:root {
+    --main-font: 'FerrariSans', sans-serif;
+    --main-black: #181818;
+    --main-white: #F5F3EB;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--main-black);
+    color: var(--main-white);
+    overflow-x: hidden;
+    font-family: var(--main-font);
+    font-weight: 400;
+}

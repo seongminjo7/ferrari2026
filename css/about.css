@@ -1,8 +1,7 @@
 .about {
     position: relative;
     height: 1156px;
-    background: black;
-    color: white;
+    background: url(../images/about.png) no-repeat center / cover;
 }
 
 .content-inner {
