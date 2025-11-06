@@ -1,0 +1,14 @@
+.about {
+    position: relative;
+    height: 1156px;
+    background: black;
+    color: white;
+}
+
+.content-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    font-size: 1.2rem;
+    line-height: 1.8;
+}

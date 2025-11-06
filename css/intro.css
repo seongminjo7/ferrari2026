@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: black;
+    color: white;
+    overflow-x: hidden;
+    font-family: sans-serif;
+}
+
+/* ✅ 인트로 영역 */
+.intro {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* ✅ 배경 영상 */
+.bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -2;
+    opacity: 0;
+    transition: opacity 1.2s ease;
+}
+
+.show-bg {
+    opacity: 1;
+}
+
+/* ✅ Ferrari 마스크 영상 */
+.intro-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(1360px, 80vw);
+    aspect-ratio: 1364 / 296;
+    object-fit: cover;
+    mask: url("/ferrari_logo.svg");
+    -webkit-mask: url("/ferrari_logo.svg");
+    mask-size: contain;
+    -webkit-mask-size: contain;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-position: center;
+    z-index: 5;
+    transition: opacity .25s ease;
+}
+
+.hide-intro {
+    opacity: 0;
+}
+
+/* ✅ 인트로 흰색 로고 */
+.intro-logo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: min(1360px, 90vw);
+    aspect-ratio: 1364 / 296;
+    transform: translate(-50%, -50%);
+    background: white;
+    mask: url("/ferrari_logo.svg");
+    -webkit-mask: url("/ferrari_logo.svg");
+    mask-size: contain;
+    -webkit-mask-size: contain;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-position: center;
+    opacity: 0;
+    transition: all 1s ease;
+    z-index: 15;
+}
+
+.show-white {
+    opacity: 1;
+}
+
+/* ✅ 위로 이동 */
+.logo-moving {
+    top: 14px;
+    left: 60px;
+    transform: translate(0, 0);
+    width: 170px;
+    transition: all 1s ease;
+}
