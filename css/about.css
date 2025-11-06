@@ -2,12 +2,11 @@
     position: relative;
     height: 1156px;
     background: url(../images/about.png) no-repeat center / cover;
+    padding: 615px 210px 0 210px;
+    box-sizing: border-box;
 }
 
-.content-inner {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 40px;
-    font-size: 1.2rem;
-    line-height: 1.8;
+.textWrpper {
+    width: 100%;
+    font-size: 3rem;
 }

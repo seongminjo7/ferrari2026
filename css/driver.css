@@ -1,0 +1,31 @@
+.driver {
+    position: relative;
+    height: 300vh;
+    /* 스크롤 영역 확보 */
+    background-color: var(--main-red);
+    padding: 70px 145px;
+    box-sizing: border-box;
+}
+
+.driverPin {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    /* 화면 전체 고정 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.driver svg {
+    width: 100%;
+    height: auto;
+}
+
+.driver svg path {
+    fill: none;
+    stroke: var(--main-white);
+    stroke-width: 21;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}

@@ -55,12 +55,23 @@
     --main-font: 'FerrariSans', sans-serif;
     --main-black: #181818;
     --main-white: #F5F3EB;
+    --main-red: #D12D37;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
 }
 
 body {
