@@ -4,13 +4,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ScuderiaFerrari Fanpage</title>
+  <title>ScuderiaFerrari 2025</title>
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="icon" href="images/favicon_192.png" sizes="192x192">
+
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/intro.css" />
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/about.css">
   <link rel="stylesheet" href="css/driver.css">
-  <!-- <link rel="stylesheet" href="css/sf25.css"> -->
+  <link rel="stylesheet" href="css/sf25.css">
+  <link rel="stylesheet" href="css/schedule.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/index.min.js"></script>
 
 </head>
 
@@ -56,14 +64,56 @@
   </section><!-- driver -->
 
   <section class="sf25">
+    <h2 class="title">SF-25</h2>
+    <div class="scroll">
+      <img src="images/sf25.png" alt="Ferrari SF-25" />
+    </div>
+  </section><!-- sf25 -->
 
-  </section>
+  <section class="raceSchedule">
+    <div class="scheduleWrapper">
+      <h2>RACE SCHEDULE</h2>
+
+      <div class="nextCountdown">
+        <h3>NEXT RACE START IN</h3>
+        <div class="countdown">
+          <div class="timeBlock">
+            <span class="timeValue" id="day">00</span>
+            <sapn class="timeLabel">DAY</sapn>
+          </div><!-- timeBlock -->
+          <span class="colon">&#58;</span>
+          <div class="timeBlock">
+            <span class="timeValue" id="hour">00</span>
+            <sapn class="timeLabel">HOUR</sapn>
+          </div><!-- timeBlock -->
+          <span class="colon">&#58;</span>
+          <div class="timeBlock">
+            <span class="timeValue" id="min">00</span>
+            <sapn class="timeLabel">MIN</sapn>
+          </div><!-- timeBlock -->
+          <span class="colon">&#58;</span>
+          <div class="timeBlock">
+            <span class="timeValue" id="sec">00</span>
+            <sapn class="timeLabel">SEC</sapn>
+          </div><!-- timeBlock -->
+        </div><!-- countdown -->
+      </div><!-- nextCountdown -->
+
+      <div class="gpListWrapper">
+        <ul class="gpList">
+          <li class="gp">
+            
+          </li>
+        </ul>
+      </div><!-- gpListWrapper -->
+    </div><!-- scheduleWrapper -->
+  </section><!-- raceSchedule -->
+
 
   <script src="js/intro.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
   <script src="js/driver.js"></script>
+  <script src="js/sf25.js"></script>
+  <script src="js/schedule.js"></script>
 </body>
 
 </html>

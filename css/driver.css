@@ -3,7 +3,8 @@
     height: 300vh;
     /* 스크롤 영역 확보 */
     background-color: var(--main-red);
-    padding: 70px 145px;
+    padding: 56px 145px;
+    /* 위아래 56px 고정 */
     box-sizing: border-box;
 }
 
@@ -17,15 +18,71 @@
     align-items: center;
 }
 
-.driver svg {
+.driverInner {
     width: 100%;
-    height: auto;
+    height: calc(100vh - 112px);
+    /* padding 제외한 높이 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.driver svg {
+    height: 100%;
+    width: auto;
+    /* ✅ 비율 유지하면서 세로 기준으로 맞추기 */
+    max-width: 100%;
+    transition: all 0.3s ease;
 }
 
 .driver svg path {
     fill: none;
-    stroke: var(--main-white);
+    stroke: var(--main-black);
     stroke-width: 21;
     stroke-linecap: round;
     stroke-linejoin: round;
+}
+
+/* ---------- 반응형 구간 ---------- */
+
+/* ✅ 1280px 이하: 패딩, 높이 약간 축소 */
+@media (max-width: 1280px) {
+    .driver {
+        padding: 56px 80px;
+    }
+
+    .driverInner {
+        height: calc(100vh - 112px);
+    }
+}
+
+/* ✅ 768px 이하: 좌우 여백 줄이고 SVG 조금 작게 */
+@media (max-width: 768px) {
+    .driver {
+        padding: 56px 40px;
+    }
+
+    .driver svg {
+        max-width: 90%;
+    }
+}
+
+/* ✅ 420px 이하: SVG 크기 고정 + 가운데 정렬 */
+@media (max-width: 420px) {
+    .driver {
+        padding: 56px 20px;
+    }
+
+    .driverInner {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .driver svg {
+        width: 420px;
+        /* ✅ 더 이상 줄어들지 않음 */
+        height: auto;
+        max-width: none;
+        /* 폭 고정 */
+    }
 }
