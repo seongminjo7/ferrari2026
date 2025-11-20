@@ -97,3 +97,174 @@
     color: var(--main-green);
     margin-top: -25px;
 }
+
+
+
+.gpListWrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.gpList {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    gap: 3px;
+}
+
+.gp {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    /* flex-grow: 1; */
+    transition: flex 0.4s ease;
+    /* 트랜지션 가능 */
+    min-width: 0;
+    cursor: pointer;
+}
+
+.gp.on {
+    flex: 2.5;
+    /* flex-grow: 2.5; */
+    padding: 0 30px 50px 20px;
+    cursor: auto;
+}
+
+.gpTitle {
+    padding: 30px;
+}
+
+.gpTitle h3 {
+    color: #717171;
+    font-size: 3rem;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.gpinfo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 26px;
+}
+
+.circuitImg {
+    /* width: 50%; */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.circuitImg img {
+    width: 100%;
+}
+
+.gpSchedule {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.gpSchedule li {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 19px;
+}
+
+.day {
+    border-right: 2px solid var(--main-black);
+    padding: 0 13px 0 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    flex: .3;
+}
+
+.date {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.dayTitle {
+    /* width: 100%; */
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.dayTitle p {
+    font-size: 1.5rem;
+}
+
+.time {
+    flex: .8;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.time p {
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+.nextGpList {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    color: var(--main-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.nextTitle {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nextTitle h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-style: italic;
+}
+.nextTitle p{
+    font-size: 1.5rem;
+}
+.subDate {
+    position: relative;
+    z-index: 1;
+    font-weight: 300;
+}
+
+.circuitImgSub {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    opacity: .8;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circuitImgSub img {
+    height: 100%;
+}

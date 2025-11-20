@@ -1,8 +1,8 @@
-const gpSections = [
+export const gpSections = [
     {
         id: "lasVegas",
         title: "LAS VAGAS",
-        circuit: "/images/gp/",
+        circuit: "images/gp/lasvagas.png",
         month: "NOV",
         day1: "Practice 1",
         date1: "21",
@@ -19,11 +19,13 @@ const gpSections = [
         day5: "Race",
         date5: "23",
         time5: "13:00",
+        subDate: "21 - 23 NOVEMBER",
+        subImg: "images/gp/lasvagasSub.png",
     },
     {
         id: "qatar",
         title: "QATAR",
-        circuit: "/images/gp/",
+        circuit: "images/gp/qatar.png",
         month: "NOV",
         day1: "Practice 1",
         date1: "28",
@@ -40,11 +42,13 @@ const gpSections = [
         day5: "Race",
         date5: "01",
         time5: "01:00",
+        subDate: "28 - 01 NOVEMBER",
+        subImg: "images/gp/qatarSub.png",
     },
     {
         id: "abuDhabi",
         title: "ABU DHABI",
-        circuit: "/images/gp/",
+        circuit: "images/gp/abudhabi.png",
         month: "DEC",
         day1: "Practice 1",
         date1: "05",
@@ -61,5 +65,7 @@ const gpSections = [
         day5: "Race",
         date5: "07",
         time5: "22:00",
+        subDate: "05 - 07 DECEMBER",
+        subImg: "images/gp/abudhabiSub.png",
     }
 ]
