@@ -58,9 +58,9 @@
     width: min(1360px, 80vw);
     aspect-ratio: 1364 / 296;
     transform: translate(-50%, -50%);
-    background: white;
-    mask: url("/ferrari_logo.svg");
-    -webkit-mask: url("/ferrari_logo.svg");
+    background: var(--main-white);
+    mask: url("/ferrari_logo_white.svg");
+    -webkit-mask: url("/ferrari_logo_white.svg");
     mask-size: contain;
     -webkit-mask-size: contain;
     mask-repeat: no-repeat;
@@ -71,6 +71,7 @@
     transition: all 1s ease;
     z-index: 15;
 }
+
 
 .show-white {
     opacity: 1;

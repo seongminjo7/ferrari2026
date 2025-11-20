@@ -13,7 +13,7 @@ function playIntroTransition(immediate = false) {
   introPlayed = true;
 
   introLogo.classList.add("show-white");
-  document.body.style.background = "white";
+  // document.body.style.background = "white";
 
   if (immediate) {
     introVideo.classList.add("hide-intro");
@@ -64,3 +64,55 @@ window.addEventListener("scroll", () => {
     introVideo.style.display = "block"; // 다시 위로 올리면 복구
   }
 });
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const headerLogo = document.querySelector(".header-logo");
+  const raceSchedule = document.querySelector(".raceSchedule");
+  const mainHeader = document.querySelector(".main-header");
+
+  // 안전 검사: 없으면 경고 출력하고 중단
+  if (!headerLogo) {
+    console.warn("headerLogo(.header-logo) 요소를 찾을 수 없습니다.");
+    return;
+  }
+  if (!raceSchedule) {
+    console.warn("raceSchedule(.raceSchedule) 요소를 찾을 수 없습니다.");
+    return;
+  }
+  if (!mainHeader) {
+    console.warn("mainHeader(.main-header) 요소를 찾을 수 없습니다.");
+    return;
+  }
+
+  // 이미지 선로딩(플래시 방지)
+  new Image().src = "/ferrari_logo_black.svg";
+  new Image().src = "/ferrari_logo_white.svg";
+
+  function updateHeaderLogo() {
+    const raceRect = raceSchedule.getBoundingClientRect();
+    const headerRect = mainHeader.getBoundingClientRect();
+
+    const isOverlap =
+      raceRect.top < headerRect.bottom &&
+      raceRect.bottom > headerRect.top;
+
+    if (isOverlap) {
+      // src 변경 (setAttribute 사용 가능)
+      headerLogo.setAttribute("src", "/ferrari_logo_black.svg");
+    } else {
+      headerLogo.setAttribute("src", "/ferrari_logo_white.svg");
+    }
+  }
+
+  // 초기 호출 + 이벤트 바인드
+  updateHeaderLogo();
+  window.addEventListener("scroll", updateHeaderLogo, { passive: true });
+  window.addEventListener("resize", updateHeaderLogo);
+});
+
