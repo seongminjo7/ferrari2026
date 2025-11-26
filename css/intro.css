@@ -72,6 +72,10 @@
     z-index: 15;
 }
 
+.intro-logo.hide-logo {
+    opacity: 0 !important;
+    transition: opacity .4s ease;
+}
 
 .show-white {
     opacity: 1;

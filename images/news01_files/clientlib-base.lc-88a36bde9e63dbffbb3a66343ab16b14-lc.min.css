@@ -1,0 +1,11 @@
+body.background-white{background-color:#fff}
+.flex{display:flex}
+.parentImgAuthor{min-width:200px;max-width:200px;justify-content:center;margin-right:2em;padding:.2em}
+.imgAuthor{max-width:100%;max-height:12em;object-fit:contain;border:2px solid black}
+.mainDivAuthor{padding:.5em;margin:1.5em;display:flex;justify-content:left;padding-left:0;align-items:center;text-align:-webkit-left}
+.clipped-text-75ch{font-style:italic;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis;max-width:75ch}
+.redFerrari{color:#da291c}
+.btnAuthor{padding:5px 10px;background-color:#4c0202;color:white;border:0;border-radius:4px;font-size:9px}
+.border2px{border:2px dotted darkslategray;padding:.5em}
+.focusOnAuthor{background-color:#070000}
+.containerBoxTitleImageAuthor{display:flex;flex-direction:column}

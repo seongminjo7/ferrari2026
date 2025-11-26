@@ -2,7 +2,7 @@
     width: 100%;
     height: 100vh;
     background-color: var(--main-red);
-    padding: 152px 160px;
+    padding: 0 160px;
 }
 
 .seasonNewsWrapper {
@@ -10,10 +10,10 @@
     height: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .season {
-    /* flex: 1; */
     padding: 70px;
     display: flex;
     flex-direction: column;
@@ -62,3 +62,70 @@
     font-weight: 500;
     font-style: italic;
 }
+
+.news {
+    width: 748px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+.news h3 {
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+.swiper {
+    width: 100%;
+}
+
+.newsCard {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newsCard .imgBox {
+    width: 622px;
+    height: 372px;
+    background-color: var(--main-white);
+    padding: 15px 20px;
+    border-radius: 26px;
+}
+
+.newsCard .imgBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.newsCard p {
+    padding: 20px 0 0 60px;
+    font-size: 1.5rem;
+    align-self: flex-start;
+}
+
+/* 버튼 스타일 */
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--main-white) !important;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.swiper-button-prev {
+    left: -40px;
+}
+
+.swiper-button-next {
+    right: -40px;
+}
+
+/* .swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+} */

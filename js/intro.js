@@ -55,11 +55,11 @@ window.addEventListener("scroll", () => {
 
   // ✅ 인트로 벗어나면 header 등장 + introVideo 숨기기
   if (scrollY >= introHeight - 100) {
-    introLogo.style.opacity = "0";
+  introLogo.classList.add("hide-logo");
     mainHeader.classList.add("show");
     introVideo.style.display = "none"; // 스크롤 아래에서는 완전히 제거
   } else {
-    introLogo.style.opacity = "1";
+introLogo.classList.remove("hide-logo");
     mainHeader.classList.remove("show");
     introVideo.style.display = "block"; // 다시 위로 올리면 복구
   }
@@ -115,4 +115,8 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", updateHeaderLogo, { passive: true });
   window.addEventListener("resize", updateHeaderLogo);
 });
+
+
+
+
 
