@@ -82,3 +82,8 @@ body {
     font-family: var(--main-font);
     font-weight: 400;
 }
+
+::selection {
+    color: var(--main-black);
+    background-color: var(--main-red);
+}

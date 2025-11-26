@@ -19,4 +19,41 @@ window.addEventListener("load", () => {
       // markers: true, // 디버깅용
     },
   });
+
+
+  
+gsap.utils.toArray(".driverCard").forEach((card, i) => {
+
+  const randomRotate = gsap.utils.random(-45, 45);
+  const xOffset = Number(card.dataset.offset) || 0;
+
+  gsap.fromTo(card,
+    {
+      y: 250 + i * 60,
+      x: xOffset,
+      rotate: randomRotate,
+      opacity: 1,      // ⭐ 항상 보이게
+      scale: 0.85,
+    },
+    {
+      y: -2600,        // ⭐ 더 멀리 위로 보내기
+      x: xOffset * 0.3,
+      rotate: randomRotate + gsap.utils.random(20, 60),
+      opacity: 1,      // ⭐ 사라지지 않게
+      scale: 1,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".driver",
+        start: "top 20%",     // 늦게 시작
+        end: "bottom -180%",  // ⭐ 스크롤 구간 크게 늘림 → 섹션 끝날 때 도착
+        scrub: 1.5,
+      }
+    }
+  );
+  
+});
+
+
+
+
 });
