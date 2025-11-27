@@ -30,8 +30,42 @@
 
 <body>
   <header class="main-header">
-    <h1><img src="/ferrari_logo_white.svg" alt=""></h1>
-    <button class="hamburger">☰</button>
+    <h1><img id="headerLogo" src="/ferrari_logo_white.svg" alt=""></h1>
+    <div class="ham">
+      <span class="line01"></span>
+      <span class="line02"></span>
+      <span class="line03"></span>
+    </div><!-- ham -->
+    <nav class="gnb">
+      <div class="gnbContainer">
+        <div class="gnbImage">
+          <img id="gnbPreview" src="images/gnb_default.png" alt="">
+        </div>
+
+        <ul>
+          <li data-img="images/gnb_ferrari.png" data-section=".about">
+            <p>SCUDERIA FERRARI HP</p>
+          </li>
+          <li data-img="images/gnb_drivers.png" data-section=".driver">
+            <p>DRIVERS</p>
+          </li>
+          <li data-img="images/gnb_sf25.png" data-section=".sf25">
+            <p>SF-25</p>
+          </li>
+          <li data-img="images/gnb_schedule.png" data-section=".raceSchedule">
+            <p>RACE SCHEDULE</p>
+          </li>
+          <li data-img="images/gnb_seasonNews.png" data-section=".seasonNews">
+            <p>25 SEASON / NEWS</p>
+          </li>
+          <li data-img="images/gnb_gallery.png" data-section=".gallery">
+            <p>GALLERY</p>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
   </header>
 
   <section class="intro">
@@ -254,6 +288,7 @@
   </footer>
 
   <script src="js/intro.js"></script>
+  <script src="js/header.js"></script>
   <script src="js/driver.js"></script>
   <script src="js/sf25.js"></script>
   <script src="js/schedule.js"></script>

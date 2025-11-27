@@ -83,7 +83,7 @@
 
 /* ✅ 위로 이동 */
 .logo-moving {
-    top: 14px;
+    top: 24px;
     left: 60px;
     transform: translate(0, 0);
     width: 170px;

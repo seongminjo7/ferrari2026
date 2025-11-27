@@ -21,39 +21,38 @@ window.addEventListener("load", () => {
   });
 
 
-  
-gsap.utils.toArray(".driverCard").forEach((card, i) => {
 
-  const randomRotate = gsap.utils.random(-45, 45);
-  const xOffset = Number(card.dataset.offset) || 0;
+  const rotateList = [-25, 8];  // 카드 순서대로 적용될 각도들
 
-  gsap.fromTo(card,
-    {
-      y: 250 + i * 60,
-      x: xOffset,
-      rotate: randomRotate,
-      opacity: 1,      // ⭐ 항상 보이게
-      scale: 0.85,
-    },
-    {
-      y: -2600,        // ⭐ 더 멀리 위로 보내기
-      x: xOffset * 0.3,
-      rotate: randomRotate + gsap.utils.random(20, 60),
-      opacity: 1,      // ⭐ 사라지지 않게
-      scale: 1,
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".driver",
-        start: "top 20%",     // 늦게 시작
-        end: "bottom -180%",  // ⭐ 스크롤 구간 크게 늘림 → 섹션 끝날 때 도착
-        scrub: 1.5,
+  gsap.utils.toArray(".driverCard").forEach((card, i) => {
+
+    const xOffset = Number(card.dataset.offset) || 0;
+    const baseRotate = rotateList[i % rotateList.length]; // 카드 개수보다 많은 경우 대비
+
+    gsap.fromTo(card,
+      {
+        y: 250 + i * 200,
+        x: xOffset,
+        rotate: baseRotate,
+        opacity: 1,
+        scale: 0.85,
+      },
+      {
+        y: -2600,
+        x: xOffset * 0.3,
+        rotate: baseRotate + 40,  // 이동 후 원하는 변화량
+        opacity: 1,
+        scale: 1,
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".driver",
+          start: "top 20%",
+          end: "bottom -180%",
+          scrub: 1.5,
+        }
       }
-    }
-  );
-  
-});
-
-
+    );
+  });
 
 
 });

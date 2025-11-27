@@ -1,11 +1,10 @@
-
 /* ✅ 헤더 */
 .main-header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 74px;
+    height: 90px;
     /* background: white; */
     color: black;
     display: flex;
@@ -20,23 +19,167 @@
 
 .main-header h1 {
     width: 170px;
-}
-.main-header h1 img{
-    width: 100%;
+    z-index: 99;
 }
 
-.main-header button{
+.main-header h1 img {
+    width: 100%;
+    transition: opacity 0.35s ease;
+}
+
+/* fade-out */
+.main-header h1 img.fade-out {
+    opacity: 0;
+}
+
+.main-header button {
     color: white;
 }
+
 .main-header.show {
     opacity: 1;
     pointer-events: auto;
 }
 
-.hamburger {
-    font-size: 28px;
-    background: none;
-    border: none;
+/* ham */
+/* ham */
+.ham {
+    width: 40px;
+    /* 더 작고 보기 좋은 크기 */
+    height: 32px;
+    position: relative;
+    transition: 300ms 400ms;
+    z-index: 99;
     cursor: pointer;
-    color: black;
+}
+
+.ham span {
+    display: block;
+    width: 100%;
+    height: 5px;
+    /* 조금 얇게 */
+    background: var(--main-white);
+    position: absolute;
+    left: 0;
+    transition: 300ms;
+    border-radius: 3px;
+}
+
+/* ========== 기본 위치 ========== */
+/* 총 높이 32px 기준 → 중앙이 16px */
+.line01 {
+    top: 0;
+    transition-delay: 200ms;
+}
+
+.line02 {
+    top: 14px;
+    /* 중앙(16px) - bar 높이 절반(2.5px) ≈ 14px */
+}
+
+.line03 {
+    top: 28px;
+    /* 마지막 줄 */
+    transition-delay: 200ms;
+}
+
+/* ========== X 아이콘 애니메이션 ========== */
+.ham.on {
+    transform: rotate(45deg);
+}
+
+.line02.on {
+    transform: scaleX(0);
+}
+
+.line03.on {
+    transform: rotate(90deg);
+    top: 14px;
+    /* 정확히 중앙에 오도록 */
+}
+
+.line01.on {
+    top: 14px;
+    /* X 만들기 */
+}
+
+.ham.on span {
+    background-color: var(--main-black);
+}
+
+
+/* nav */
+/* gnb 전체 */
+nav.gnb {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    /* 처음엔 오른쪽 화면 밖 */
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-white);
+    transition: right 600ms cubic-bezier(.65, 0, .35, 1);
+    z-index: 90;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav.gnb.open {
+    right: 0;
+    /* 열릴 때 화면 안으로 들어오기 */
+}
+
+.gnbContainer {
+    display: flex;
+    align-items: stretch;
+    gap: 120px;
+}
+
+.gnbImage {
+    width: 480px;
+    /* height: 450px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gnbImage img {
+    width: 480px;
+    height: 100%;
+    object-fit: cover;
+    /* transition: opacity 400ms ease; */
+}
+
+nav.gnb ul {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    list-style: none;
+}
+
+nav.gnb ul li {
+    width: 1050px;
+}
+
+nav.gnb ul li p {
+    font-size: 4.5rem;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 400;
+    /* 시작은 normal */
+    /* transition: 0.25s; */
+}
+
+/* hover 효과 (너가 준 것 그대로) */
+nav.gnb ul li p:hover {
+    color: var(--main-red);
+    font-weight: 700;
+    font-style: italic;
+}
+
+nav.gnb ul li.active p {
+    color: var(--main-red);
+    font-weight: 700;
+    font-style: italic;
 }
