@@ -89,3 +89,17 @@
     width: 170px;
     transition: all 1s ease;
 }
+
+@media screen and (max-width : 1250px) {
+    .logo-moving {
+        top: 30px;
+        left: 40px;
+        width: 120px;
+    }
+}
+
+@media screen and (max-width : 960px) {
+    .logo-moving {
+        left: 20px;
+    }
+}
