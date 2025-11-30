@@ -41,5 +41,18 @@
   width: auto;
   object-fit: contain;
   display: block;
-  transform: translateX(100vw); /* 오른쪽 화면 밖에서 시작 */
+  transform: translateX(100vw);
+  /* 오른쪽 화면 밖에서 시작 */
+}
+
+@media screen and (max-width : 900px) {
+  .title {
+    font-size: 15rem;
+  }
+}
+
+@media screen and (max-width : 465px) {
+  .title {
+    font-size: 12rem;
+  }
 }

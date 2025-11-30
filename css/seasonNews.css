@@ -125,7 +125,109 @@
     right: -40px;
 }
 
-/* .swiper-button-next::after,
-.swiper-button-prev::after {
-  display: none;
-} */
+
+.swiper-button-next svg,
+.swiper-button-prev svg {
+    display: none;
+}
+
+
+
+@media screen and (max-width : 1800px) {
+    .seasonNews {
+        padding: 0 80px;
+    }
+
+    .seasonNewsWrapper {
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width : 1600px) {
+    .season {
+        padding: 50px;
+    }
+
+    .news {
+        width: 680px;
+    }
+
+    .newsCard .imgBox {
+        width: 580px;
+    }
+}
+
+@media screen and (max-width : 1340px) {
+
+    .seasonNews {
+        height: 1336px;
+        padding: 120px;
+    }
+
+    .seasonNewsWrapper {
+        flex-direction: column;
+        gap: 80px;
+    }
+
+    .season {
+        width: 100%;
+    }
+
+    .news {
+        width: 100%;
+    }
+
+    .newsCard .imgBox {
+        width: 80%;
+    }
+
+    .season h3,
+    .news h3 {
+        font-size: 4.5rem;
+    }
+}
+
+
+@media screen and (max-width : 765px) {
+    .seasonNews {
+        height: 1200px;
+        padding: 40px;
+    }
+
+    .seasonNewsWrapper {
+        gap: 40px;
+    }
+
+    .swiper-button-next:after,
+    .swiper-rtl .swiper-button-prev:after {
+        height: 30px;
+    }
+
+    .newsCard .imgBox {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width : 525px) {
+    .seasonNews {
+        height: 1000px;
+    }
+
+    .season {
+        padding: 30px;
+        border-radius: 45px;
+    }
+
+    .seasonNews {
+        padding: 20px;
+    }
+
+    .season h3,
+    .news h3 {
+        font-size: 4rem;
+    }
+
+    .newsCard .imgBox {
+        width: 70%;
+    }
+}

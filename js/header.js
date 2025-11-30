@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const headerLogo = document.querySelector("#headerLogo");
     const ham = document.querySelector(".ham");
     const nav = document.querySelector("nav.gnb");
+    const navImg = document.getElementById("gnbPreview");
+    const navItems = document.querySelectorAll("nav.gnb ul li p");
     const raceSchedule = document.querySelector(".raceSchedule");
 
     let menuOpen = false;
@@ -83,6 +85,52 @@ document.addEventListener("DOMContentLoaded", () => {
             closeMenu();
         }
     });
+
+
+
+    // =========================
+    // hover → preview 이미지 변경
+    // =========================
+    navItems.forEach((pTag) => {
+        pTag.addEventListener("mouseenter", () => {
+            const li = pTag.closest("li");
+            const img = li.dataset.img;
+
+            navImg.style.opacity = "0";
+            setTimeout(() => {
+                navImg.src = img;
+                navImg.style.opacity = "1";
+            });
+        });
+
+        pTag.addEventListener("mouseleave", () => {
+            navImg.style.opacity = "0";
+            setTimeout(() => {
+                navImg.src = "images/gnb_default.png";
+                navImg.style.opacity = "1";
+            });
+        });
+    });
+
+    // =========================
+    // 클릭 → section 이동
+    // =========================
+    navItems.forEach((pTag) => {
+        pTag.addEventListener("click", () => {
+            const li = pTag.closest("li");
+            const targetSection = li.dataset.section;
+            const sectionEl = document.querySelector(targetSection);
+
+            if (sectionEl) {
+                closeMenu();
+                setTimeout(() => {
+                    sectionEl.scrollIntoView({ behavior: "smooth" });
+                }, 300);
+            }
+        });
+    });
+
+
 
     // =========================
     // raceSchedule 감지

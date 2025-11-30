@@ -160,6 +160,7 @@ nav.gnb ul {
 
 nav.gnb ul li {
     width: 1050px;
+    flex: 1;
 }
 
 nav.gnb ul li p {
@@ -182,4 +183,17 @@ nav.gnb ul li.active p {
     color: var(--main-red);
     font-weight: 700;
     font-style: italic;
+}
+
+
+
+
+@media screen and (max-width : 1800px) {
+    .gnbImage {
+        width: 320px;
+    }
+
+    nav.gnb ul li {
+        width: 950px;
+    }
 }

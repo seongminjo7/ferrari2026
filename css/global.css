@@ -87,3 +87,28 @@ body {
     color: var(--main-black);
     background-color: var(--main-red);
 }
+
+@media screen and (max-width : 1800px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width : 1570px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width : 900px) {
+    html {
+        font-size: 10px;
+    }
+}
+
+
+@media screen and (max-width : 630px) {
+    html {
+        font-size: 8px;
+    }
+}

@@ -121,6 +121,20 @@
     }
 }
 
+@media screen and (max-width : 1050px) {
+    .driverCard {
+        width: 328px;
+        height: 455px;
+    }
+}
+
+@media screen and (max-width : 900px) {
+    .driverCard {
+        width: 250px;
+        height: 355px;
+    }
+}
+
 /* ✅ 768px 이하: 좌우 여백 줄이고 SVG 조금 작게 */
 @media (max-width: 768px) {
     .driver {
@@ -129,6 +143,20 @@
 
     .driver svg {
         max-width: 90%;
+    }
+}
+
+@media screen and (max-width : 700px) {
+    .driverCard {
+        width: 220px;
+        height: 313px;
+    }
+}
+
+@media screen and (max-width : 570px) {
+    .driverCard {
+        width: 180px;
+        height: 256px;
     }
 }
 
@@ -149,5 +177,11 @@
         height: auto;
         max-width: none;
         /* 폭 고정 */
+    }
+
+
+    .driverCard {
+        width: 120px;
+        height: 171px;
     }
 }

@@ -42,7 +42,7 @@ function setupScroll() {
       scrollTrigger: {
         trigger: ".sf25",
         start: "top top",
-        end: "+=" + moveDistance,
+        end: "+=" + moveDistance * .1,
         pin: true,
         scrub: 1, // ✅ 부드럽게 연동
         anticipatePin: 1,

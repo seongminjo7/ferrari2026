@@ -10,3 +10,15 @@
     width: 100%;
     font-size: 3rem;
 }
+
+@media screen and (max-width : 1345px) {
+    .about {
+        padding: 615px 120px 0 120px;
+    }
+}
+
+@media screen and (max-width : 630px) {
+    .about {
+        padding: 615px 20px 0 20px;
+    }
+}
