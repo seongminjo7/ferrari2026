@@ -42,7 +42,6 @@
   object-fit: contain;
   display: block;
   transform: translateX(100vw);
-  /* 오른쪽 화면 밖에서 시작 */
 }
 
 @media screen and (max-width : 900px) {
