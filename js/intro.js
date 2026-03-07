@@ -91,8 +91,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // 이미지 선로딩(플래시 방지)
-  new Image().src = "/ferrari_logo_black.svg";
-  new Image().src = "/ferrari_logo_white.svg";
+  new Image().src = "../images/ferrari_logo_black.svg";
+  new Image().src = "../images/ferrari_logo_white.svg";
 
   function updateHeaderLogo() {
     const raceRect = raceSchedule.getBoundingClientRect();
