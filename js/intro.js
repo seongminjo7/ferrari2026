@@ -104,9 +104,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (isOverlap) {
       // src 변경 (setAttribute 사용 가능)
-      headerLogo.setAttribute("src", "/ferrari_logo_black.svg");
+      headerLogo.setAttribute("src", "../images/ferrari_logo_black.svg");
     } else {
-      headerLogo.setAttribute("src", "/ferrari_logo_white.svg");
+      headerLogo.setAttribute("src", "../images/ferrari_logo_white.svg");
     }
   }
 

@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (menuOpen || inRaceSchedule) {
             headerLogo.classList.add("fade-out");
             setTimeout(() => {
-                headerLogo.src = "/ferrari_logo_black.svg";
+                headerLogo.src = "../images/ferrari_logo_black.svg";
                 headerLogo.classList.remove("fade-out");
             }, 150);
 
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             headerLogo.classList.add("fade-out");
             setTimeout(() => {
-                headerLogo.src = "/ferrari_logo_white.svg";
+                headerLogo.src = "../images/ferrari_logo_white.svg";
                 headerLogo.classList.remove("fade-out");
             }, 150);
 
