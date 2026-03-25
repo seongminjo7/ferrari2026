@@ -69,7 +69,7 @@
     -webkit-mask-position: center;
     opacity: 0;
     transition: all 1s ease;
-    z-index: 15;
+    /* z-index: 15; */
 }
 
 .intro-logo.hide-logo {
