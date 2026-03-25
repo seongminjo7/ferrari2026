@@ -16,29 +16,3 @@ gsap.from(".textWrpper p", {
     duration: 2                 // scrub을 쓰지 않을 경우를 대비한 기본 지속 시간
 });
 
-// 마우스 움직임에 따른 배경 반대 이동 효과
-const aboutSection = document.querySelector('.about');
-
-aboutSection.addEventListener('mousemove', (e) => {
-    // 섹션 내에서의 마우스 상대 위치 계산 (0 ~ 1 사이 값)
-    const { width, height } = aboutSection.getBoundingClientRect();
-    const moveX = (e.clientX / width) - 0.5;
-    const moveY = (e.clientY / height) - 0.5;
-
-    // 마우스 반대 방향으로 움직이게 설정 (숫자를 키우면 더 많이 움직임)
-    // 마우스가 오른쪽으로 가면 배경은 왼쪽(-30px)으로 이동
-    gsap.to(".about", {
-        duration: 0.6,
-        backgroundPosition: `${50 + moveX * -30}% ${50 + moveY * -30}%`,
-        ease: "power2.out"
-    });
-});
-
-// 마우스가 섹션을 벗어나면 다시 중앙으로 부드럽게 복귀
-aboutSection.addEventListener('mouseleave', () => {
-    gsap.to(".about", {
-        duration: 1,
-        backgroundPosition: "50% 50%",
-        ease: "power2.out"
-    });
-});

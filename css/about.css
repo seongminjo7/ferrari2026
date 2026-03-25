@@ -1,12 +1,11 @@
 .about {
     position: relative;
     height: 1156px;
-    /* 배경 크기를 110%로 키우고 중심을 잡습니다 */
-    background: url(../images/about.png) no-repeat center / 110%;
+    background: url(../images/about.png) no-repeat center / cover;
     padding: 615px 210px 0 210px;
     box-sizing: border-box;
     overflow: hidden;
-    /* 이미지가 삐져나오지 않도록 설정 */
+    /* 텍스트가 밑에서 올라올 때 영역 밖으로 나가는 것 방지 */
 }
 
 .textWrpper {
