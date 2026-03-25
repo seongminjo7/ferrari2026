@@ -1,14 +1,26 @@
 .about {
     position: relative;
     height: 1156px;
-    background: url(../images/about.png) no-repeat center / cover;
+    /* 배경 크기를 110%로 키우고 중심을 잡습니다 */
+    background: url(../images/about.png) no-repeat center / 110%;
     padding: 615px 210px 0 210px;
     box-sizing: border-box;
+    overflow: hidden;
+    /* 이미지가 삐져나오지 않도록 설정 */
 }
 
 .textWrpper {
     width: 100%;
     font-size: 3rem;
+}
+
+.textWrpper p {
+    margin: 0;
+    /* 기본 마진 제거로 간격 조절 용이 */
+    line-height: 1.4;
+    /* 가독성을 위한 줄간격 */
+    will-change: transform, opacity;
+    /* 성능 최적화 */
 }
 
 @media screen and (max-width : 1345px) {
