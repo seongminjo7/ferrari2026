@@ -48,7 +48,7 @@ export const gpSections = [
     {
         id: "monaco",
         title: "MONACO",
-        circuit: "images/gp/monco.avif",
+        circuit: "images/gp/monaco.avif",
         month: "JUN",
         day1: "Practice 1",
         date1: "05",
