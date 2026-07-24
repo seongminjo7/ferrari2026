@@ -37,6 +37,13 @@ window.onload = () => {
     'https://raw.githubusercontent.com/seongminjo7/ferrari_gallery/main/gallery2026/gallery29.jpeg',
     'https://raw.githubusercontent.com/seongminjo7/ferrari_gallery/main/gallery2026/gallery30.jpeg',
     'https://raw.githubusercontent.com/seongminjo7/ferrari_gallery/main/gallery2026/gallery31.jpeg',
+    'https://raw.githubusercontent.com/seongminjo7/ferrari_gallery/main/gallery2026/gallery32.jpeg',
+    'https://raw.githubusercontent.com/seongminjo7/ferrari_gallery/main/gallery2026/gallery33.jpeg',
+    'https://raw.githubusercontent.com/seongminjo7/ferrari_gallery/main/gallery2026/gallery34.jpeg',
+    'https://raw.githubusercontent.com/seongminjo7/ferrari_gallery/main/gallery2026/gallery35.jpeg',
+    'https://raw.githubusercontent.com/seongminjo7/ferrari_gallery/main/gallery2026/gallery36.jpeg',
+    'https://raw.githubusercontent.com/seongminjo7/ferrari_gallery/main/gallery2026/gallery37.jpeg',
+    'https://raw.githubusercontent.com/seongminjo7/ferrari_gallery/main/gallery2026/gallery38.jpeg',
   ];
 
 
