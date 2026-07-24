@@ -44,7 +44,6 @@ window.onload = () => {
     'https://raw.githubusercontent.com/seongminjo7/ferrari_gallery/main/gallery2026/gallery36.jpeg',
     'https://raw.githubusercontent.com/seongminjo7/ferrari_gallery/main/gallery2026/gallery37.jpeg',
     'https://raw.githubusercontent.com/seongminjo7/ferrari_gallery/main/gallery2026/gallery38.jpeg',
-    'https://raw.githubusercontent.com/seongminjo7/ferrari_gallery/main/gallery2026/gallery38.jpeg',
   ];
 
 
